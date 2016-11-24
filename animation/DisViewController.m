@@ -8,7 +8,7 @@
 
 #import "DisViewController.h"
 
-#define beginY 64
+#define beginY 100
 #define  SYSTEM_SCREEN_W ([UIScreen mainScreen].bounds.size.width)
 #define  SYSTEM_SCREEN_H ([UIScreen mainScreen].bounds.size.height)
 @interface DisViewController ()
@@ -30,7 +30,7 @@
     
     self.shaperLayer = [[CAShapeLayer alloc] init];
     self.shaperLayer.fillColor = [UIColor blueColor].CGColor;
-    self.shaperLayer.frame = CGRectMake(0, beginY,SYSTEM_SCREEN_W,SYSTEM_SCREEN_H-beginY);
+    self.shaperLayer.frame = CGRectMake(0, 0,SYSTEM_SCREEN_W,SYSTEM_SCREEN_H);
     self.shaperLayer.strokeColor = [UIColor blueColor].CGColor;
     [self.view.layer addSublayer:self.shaperLayer];
     [self drawBeginShapeLayer:CGPointMake(SYSTEM_SCREEN_W/2.0, beginY)];

@@ -41,8 +41,12 @@
     if (cell == nil) {
         cell = [[UITableViewCell  alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ustb];
     }
+    if (indexPath.row == 0) {
+        cell.textLabel.text = @"缓冲函数";
+    } else {
+        cell.textLabel.text = @"弹簧动画。";
+    }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
